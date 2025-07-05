@@ -3,7 +3,7 @@ import java.util.ArrayList;
 /**
  * Demonstrates storing and sorting Student objects in an ArrayList using selection sort.
  */
-public class Main {
+public class StudentSorter {
     /**
      * Main method to create, sort, and display a list of students.
      *

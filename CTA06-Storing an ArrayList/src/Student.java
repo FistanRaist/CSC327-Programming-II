@@ -10,11 +10,21 @@ public class Student {
     /**
      * Constructs a Student object with specified roll number, name, and address.
      *
-     * @param rollno  the student's roll number
-     * @param name    the student's name
-     * @param address the student's address
+     * @param rollno  the student's roll number, must be non-negative
+     * @param name    the student's name, must not be null
+     * @param address the student's address, must not be null
+     * @throws IllegalArgumentException if rollno is negative, or name or address is null
      */
     public Student(int rollno, String name, String address) {
+        if (rollno < 0) {
+            throw new IllegalArgumentException("Roll number cannot be negative");
+        }
+        if (name == null) {
+            throw new IllegalArgumentException("Name cannot be null");
+        }
+        if (address == null) {
+            throw new IllegalArgumentException("Address cannot be null");
+        }
         this.rollno = rollno;
         this.name = name;
         this.address = address;
