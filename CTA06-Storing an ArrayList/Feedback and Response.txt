@@ -1,0 +1,27 @@
+Feedback Response
+
+The feedback received for the CSC 372 Programming 2 Critical Thinking Assignment (Option 1) was:
+- Good work on CTA this time.
+- Good to see javadoc comments to public methods.
+- Make sure inputs to Student are valid i.e. no nulls, -ve numbers are accepted and if they are input throw IllegalArgumentException.
+- Optionally try writing a JUnit test to test various scenarios.
+- Main isn't a good name for a class, use one that conveys intent better.
+
+Changes Implemented
+To address the feedback, the following changes were made to the source code:
+- Student.java:
+  - Added validation in the constructor to throw IllegalArgumentException if rollno is negative.
+  - Added validation in the constructor to throw IllegalArgumentException if name is null or empty (after trimming whitespace).
+  - Added validation in the constructor to throw IllegalArgumentException if address is null or empty (after trimming whitespace).
+  - Updated Javadoc to document the new validation requirements and exceptions.
+- Main.java:
+  - Renamed the class and file to StudentSorter.java to better convey the intent of managing and sorting student data.
+- StudentTest.java:
+  - Added a new JUnit test class to test:
+    - Valid Student object creation.
+    - Exception handling for negative rollno.
+    - Exception handling for null or empty name.
+    - Exception handling for null or empty address.
+    - Correctness of sorting by name using NameComparator.
+    - Correctness of sorting by roll number using RollnoComparator.
+These changes ensure that invalid inputs (negative roll numbers, null or empty names and addresses) are caught early, improving the robustness of the application, and the JUnit tests verify the behavior. The class name change enhances code clarity.
